@@ -9,14 +9,24 @@ body{
 
 canvas{
 	background-color: #090;
-	/*border: 1px solid green;
-	position: absolute;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;*/
+	-webkit-transition: -webkit-transform 2s;
 }
+
+canvas:hover{
+	width: 51px;
+	height: 51px;
+}
+
 #canvasDiv{
 	margin: 150px auto 40px;
+}
+
+#reloadButton{
+	text-decoration: none;
+	color: black;
+	font: 20px verdana;
+}
+
+#reloadButton:hover{
+	font: 30px verdana;
 }
