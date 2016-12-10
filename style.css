@@ -9,7 +9,7 @@ body{
 
 canvas{
 	background-color: #090;
-	-webkit-transition: -webkit-transform 2s;
+	-webkit-transition: -webkit-transform 1s;
 }
 
 canvas:hover{

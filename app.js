@@ -1,43 +1,19 @@
 document.addEventListener("DOMContentLoaded", function(){
-	// canvas = document.createElement('canvas');
-	// canvas.width= canvas.height = 200
-	// ctx = canvas.getContext("2d");
+	var button = []
+	for(var i =0; i< 10;i++){
+		button[i]=document.getElementById('canvas'+ i);
+		console.log(button[i])
+	}
+	var ctx = [];
+	for(var i =1; i<10;i++){
+		ctx[i] = button[i].getContext('2d') //bez tego nie będzie można rysować po canvasie
+	}
+	var bDisabled =[];
+	for(var i =1; i<10;i++){
+		bDisabled[i] = false; //czy zablokować button
+	}
+	var isResult = false //jeżeli to koniec gry to stop
+	var content =[];//trzyma informację o elemencie canvas
+	
 
-	// document.body.appendChild(canvas);
-	// init();
-	// tick();
-
-	// function init(){
-
-	// }
-	// function tick(){
-	// 	window.requestAnimationFrame(tick);
-	// 	update();
-	// 	render();
-	// }
-	// function update() {};
-	// function render() {};
-
-	// function Title(x,y){
-	// 	var x = x, y = y;
-	// 	var tile = Tile.BLANK;
-
-	// 	if(tile == null){
-	// 		var _c = document.createElement('canvas');
-	// 		_c.width = _c.height = 100;
-	// 		_ctx = _c.getContext('2d');
-	// 		_ctx.fillStyle = "blue";
-	// 		//Blank
-	// 		_ctx.fillRect(0,0,100,100);
-	// 		Title.BLANK = new Image();
-	// 		Title.BLANK.src = _c.toDataURL();
-	// 	}
-
-	// 	this.update = function(){
-
-	// 	}
-	// 	this.draw = function(ctx){
-	// 		ctx.drawImage(tile,x,y)
-	// 	}
-	// }
 });
