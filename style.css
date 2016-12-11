@@ -5,16 +5,18 @@
 }
 body{
 	text-align: center;
+	background-color: #1c1c1c;
 }
 
 canvas{
 	background-color: #090;
 	-webkit-transition: -webkit-transform 1s;
+	box-shadow: 20px 20px 50px #1c1c1c;
 }
 
 canvas:hover{
-	width: 51px;
-	height: 51px;
+	width: 101px;
+	height: 101px;
 }
 
 #canvasDiv{
@@ -23,10 +25,11 @@ canvas:hover{
 
 #reloadButton{
 	text-decoration: none;
-	color: black;
-	font: 20px verdana;
+	color: white;
+	text-shadow: 5px 5px 30px white;
+	font: 50px verdana;
 }
 
 #reloadButton:hover{
-	font: 30px verdana;
+	font: 60px verdana;
 }
