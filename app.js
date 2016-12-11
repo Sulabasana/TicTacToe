@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+// document.addEventListener("DOMContentLoaded", function(){
 	var button = []
 	for(var i =0; i< 10;i++){
 		button[i]=document.getElementById('canvas'+ i);
@@ -15,5 +15,15 @@ document.addEventListener("DOMContentLoaded", function(){
 	var isResult = false //jeżeli to koniec gry to stop
 	var content =[];//trzyma informację o elemencie canvas
 	
+	function loop(x){
+		
+		if(!bDisabled[x]){ //jeżeli jest równe false to uruchom
 
-});
+			bDisabled[x] = true;//niechcemy żeby ten sam przycisk był dostepny do kliknięcia cały czas
+			button[x].style.opacity = 0.7;//każdy przycisk po kliknięciu zmieni wygląd
+			content[x] = 'x';//to zdecyduje o zwycięstwie
+			
+			
+		}
+	}
+// });
