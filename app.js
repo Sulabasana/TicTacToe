@@ -36,7 +36,7 @@
 
 				computerTurn();
 			},300)
-		checkWinner();
+		setTimeout(checkWinner,1000);
 		}
 		
 	}
@@ -52,7 +52,7 @@ function computerTurn(){
 	else if(r< 0.6 && !bDisabled[6]) draw0Steps(6);
 	else if(r< 0.7 && !bDisabled[7]) draw0Steps(7);
 	else if(r< 0.8 && !bDisabled[8]) draw0Steps(8);
-	else if(r< 0.1 && !bDisabled[9]) draw0Steps(9);
+	else if(r< 0.9 && !bDisabled[9]) draw0Steps(9);
 	else computerTurn();
 }
 function draw0Steps(x){
@@ -72,9 +72,23 @@ function draw0Steps(x){
 }
 function checkWinner(){
 	if(!isResult){//isResult === false
-		if(content[1] == 'x' && content[2] == 'x' && content[3] == "x"){
-		showWinner("You win!");
-		}
+		if(content[1] == 'x' && content[2] == 'x' && content[3] == "x") showWinner("You win!");
+		else if(content[4] == 'x' && content[5] == 'x' && content[6] == "x") showWinner("You win!");
+		else if(content[7] == 'x' && content[8] == 'x' && content[9] == "x") showWinner("You win!");
+		else if(content[1] == 'x' && content[4] == 'x' && content[7] == "x") showWinner("You win!");
+		else if(content[2] == 'x' && content[5] == 'x' && content[8] == "x") showWinner("You win!");
+		else if(content[3] == 'x' && content[6] == 'x' && content[9] == "x") showWinner("You win!");
+		else if(content[1] == 'x' && content[5] == 'x' && content[9] == "x") showWinner("You win!");
+		else if(content[3] == 'x' && content[5] == 'x' && content[7] == "x") showWinner("You win!");
+	
+		else if(content[1] == '0' && content[2] == '0' && content[3] == "0") showWinner("You lose!");
+		else if(content[4] == '0' && content[5] == '0' && content[6] == "0") showWinner("You lose!");
+		else if(content[7] == '0' && content[8] == '0' && content[9] == "0") showWinner("You lose!");
+		else if(content[1] == '0' && content[4] == '0' && content[7] == "0") showWinner("You lose!");
+		else if(content[2] == '0' && content[5] == '0' && content[8] == "0") showWinner("You lose!");
+		else if(content[3] == '0' && content[6] == '0' && content[9] == "0") showWinner("You lose!");
+		else if(content[1] == '0' && content[5] == '0' && content[9] == "0") showWinner("You lose!");
+		else if(content[3] == '0' && content[5] == '0' && content[7] == "0") showWinner("You lose!");
 	}
 }
 function showWinner(x){
