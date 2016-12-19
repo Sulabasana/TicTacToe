@@ -11,6 +11,9 @@ body{
 canvas{
 	background-color: #090;
 	-webkit-transition: -webkit-transform 1s;
+	-ms-transition: -ms-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-o-transition: -o-transform 1s;
 	box-shadow: 20px 20px 50px #1c1c1c;
 }
 
@@ -22,14 +25,20 @@ canvas:hover{
 #canvasDiv{
 	margin: 150px auto 40px;
 }
-
-#reloadButton{
-	text-decoration: none;
-	color: white;
-	text-shadow: 5px 5px 30px white;
-	font: 50px verdana;
+button{
+	border: 0;
+	margin: 0;
+	width: 308px;
+	height: 50px;
+	background:#090;
 }
 
-#reloadButton:hover{
-	font: 60px verdana;
+a{
+	text-decoration: none;
+	color: #fff;
+	font: 40px verdana;
+}
+
+button:hover{
+	opacity: 0.7;
 }
